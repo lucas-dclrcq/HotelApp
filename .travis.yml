@@ -1,0 +1,16 @@
+os:
+  - linux
+
+language: java
+
+stages:
+  - test
+  
+jdk:
+  - openjdk8
+
+jobs:
+  include:
+    - stage: jvm_build
+      script:
+        - mvn clean test
